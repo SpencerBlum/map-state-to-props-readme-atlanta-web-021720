@@ -16,17 +16,18 @@ class App extends Component {
         <button onClick={(event) => this.handleOnClick()}>
           Click
         </button>
-        <p>{this.props.items.length}</p>
+        <p>{this.props.orangePeel.length}</p>
       </div>
     );
   }
 };
 
 
-const mapStateToProps = (state) => {
-  return { items: state.items };
-};
+const vanilla = (orangePeel) => {
+  debugger;
+  return { orangePeel: ['a', 'b', 'c']  }
+}
  
-export default connect(mapStateToProps)(App);
+export default connect(vanilla)(App);
 
 

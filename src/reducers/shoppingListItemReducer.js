@@ -1,16 +1,16 @@
 export default function shoppingListItemReducer(state = {
-  items: []
+  orangePeel: []
 }, action) {
   console.log(action);
   switch(action.type) {
 
     case 'INCREASE_COUNT':
-      console.log("Current state.items length %s", state.items.length);
-      console.log("Updating state.items length to %s", state.items.length + 1);
-      return Object.assign({}, state, { items: state.items.concat(state.items.length + 1) });
+      console.log("Current state.items length %s", state.orangePeel.length);
+      console.log("Updating state.items length to %s", state.orangePeel.length + 1);
+      return Object.assign({}, state, { orangePeel: state.orangePeel.concat(state.orangePeel.length + 1) });
 
     default:
-      console.log("Initial state.items length: %s", state.items.length);
+      console.log("Initial state.items length: %s", state.orangePeel.length);
       return state;
   }
 };
